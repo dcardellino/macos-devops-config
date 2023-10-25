@@ -4,7 +4,6 @@
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh
   ignore_errors: true
-  # TODO: Check if the user exists locally or it is defined in an LDAP database.
 
 - name: Define oh_my_zsh_installation_folder
   ansible.builtin.set_fact:
