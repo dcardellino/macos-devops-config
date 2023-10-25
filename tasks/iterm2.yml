@@ -1,0 +1,19 @@
+---
+- name: Ensure iTerm directories are initialized if they are not already.
+  ansible.builtin.command: "open -a /Applications/iTerm.app"
+  args:
+    creates: "~/Library/Application Support/iTerm2/DynamicProfiles/"
+
+- name: Ensure fonts are installed.
+  ansible.builtin.get_url:
+    url: "{{ item.url }}"
+    dest: "~/Library/Fonts"
+  with_items: "{{ iterm2_fonts }}"
+  when: iterm2_fonts is defined
+
+- name: Ensure local DynamicProfiles are copied to iTerm2 directory.
+  ansible.builtin.copy:
+    src: "files/com.googlecode.iterm2.plist"
+    dest: "~/Library/Preferences"
+    remote_src: yes
+    backup: no
