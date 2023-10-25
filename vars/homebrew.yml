@@ -1,0 +1,49 @@
+---
+homebrew_installed_packages:
+  - age
+  - coreutils
+  - colima
+  - docker
+  - dockutil
+  - flux
+  - git
+  - gnu-sed
+  - gnu-which
+  - gnutls
+  - go
+  - grep
+  - gpg
+  - helm
+  - helmfile
+  - k9s
+  - kubectl
+  - kubectx
+  - neovim
+  - openssl
+  - ssh-copy-id
+  - sops
+  - terraform
+  - terraform-docs
+  - tflint
+  - telnet
+  - velero
+  - watch
+  - wget
+  - zsh
+  - zsh-history-substring-search
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - homebrew/cask-fonts
+  - fluxcd/tap
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - 1password
+  - bitwarden
+  - font-hack-nerd-font
+  - google-chrome
+  - google-cloud-sdk
+  - slack
+  - todoist

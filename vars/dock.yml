@@ -1,0 +1,22 @@
+---
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - TV
+  - Podcasts
+  - 'App Store'
+  - Messages
+  - Maps
+  - Photos
+  - FaceTime
+  - Calendar
+  - Contacts
+  - Reminders
+  - Notes
+  - Freeform
+  - Music
+dockitems_persist:
+- name: "Visual Studio Code"
+  path: "/Applications/Visual Studio Code.app/"
+  pos: 5
