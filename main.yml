@@ -13,6 +13,15 @@
     - vars/sudoers.yml
     - vars/terminal.yml
 
+  pre_tasks:
+    - name: Assert that variables are set
+      ansible.builtin.assert:
+        that:
+          - mas_email != ""
+          - mas_password != ""
+      when: mas_installed_apps | length > 0
+      tags: ["preflight"]
+
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
